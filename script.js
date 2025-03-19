@@ -107,6 +107,8 @@ function editItem(e){
     editElement = e.currentTarget.parentElement.previousElementSibling;
     grocery.value = editElement.innerHTML;
     grocery.focus();
+    const length = grocery.value.length;
+    grocery.setSelectionRange(length, length);
     editFlag = true;
     editID = element.dataset.id;
     submitBtn.textContent = "edit";
